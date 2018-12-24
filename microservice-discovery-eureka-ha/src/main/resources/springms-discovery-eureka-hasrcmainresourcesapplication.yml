@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: springms-discovery-eureka-ha
+  profiles:
+    # 主要激活哪个配置文件
+    active: peer1
