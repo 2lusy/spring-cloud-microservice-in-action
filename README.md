@@ -1,6 +1,10 @@
-## Spring Cloud微服务实战视频教程配套代码。
+## Spring Cloud微服务demo。
 
-* 视频地址：[http://edu.51cto.com/course/course_id-7348.html](http://edu.51cto.com/course/course_id-7348.html) 
-* Spring Cloud 交流QQ群：157525002，欢迎有兴趣的童鞋加入交流！
-* Spring Cloud开源电子书：[http://git.oschina.net/itmuch/spring-cloud-book](http://git.oschina.net/itmuch/spring-cloud-book) 
+*config中 service为配置中心,client 用于测试.
+
+*microservice-discovery-eureka 为单机注册中心,microservice-discovery-eureka-ha为高可用集群注册中心.
+
+*microservice-consumer-movie-feign-customizing-without-hystrix 为消费方.
+
+*microservice-provider-user 为服务提供方.
 
