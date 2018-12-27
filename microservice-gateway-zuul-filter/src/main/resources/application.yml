@@ -12,8 +12,8 @@ eureka:
 zuul:
   routes:
     abc:
-      path: /user-path/**
-      serviceId: microservice-consumer-movie-feign-customizing-without-hystrix
+      path: /**
+      serviceId: microservice-provider-user
 
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 ribbon:
