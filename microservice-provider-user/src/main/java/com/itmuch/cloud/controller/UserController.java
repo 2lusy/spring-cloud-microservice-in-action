@@ -1,4 +1,6 @@
 package com.itmuch.cloud.controller;
+import com.ctrip.framework.apollo.Config;
+import com.ctrip.framework.apollo.ConfigService;
 import com.itmuch.cloud.api.Aapi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -23,10 +25,13 @@ public class UserController {
     //摸拟调用失败
     /*int i=1/0;*/
 
-
+    Config config = ConfigService.getAppConfig(); //config instance is singleton for each namespace and is never null
+    String someKey = "name";
+    String someDefaultValue = "someDefaultValueForTheKey";
+    String value = config.getProperty(someKey, someDefaultValue);
     HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
     int port = request.getLocalPort();
-    return "microservice-provider-user"+port;
+    return "microservice-provider-user"+port+value;
   }
   @GetMapping("/getBapi")
   public String getBapi(){
